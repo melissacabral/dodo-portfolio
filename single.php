@@ -18,6 +18,15 @@
 				</h2>
 				<div class="entry-content">
 					<?php the_content(); ?>
+					
+					<?php wp_link_pages( array(
+						'before' => '<div class="post-pagination">Continue Reading this post:',
+						'after' 			=> '</div>',
+						//'next_or_number' 	=> 'next',
+						'pagelink'			=> '<span class="current">%</span>',
+					) ); ?>
+					
+
 				</div>
 				<div class="postmeta">
 					<span class="author">by: <?php the_author(); ?> </span>
@@ -40,6 +49,10 @@
 			//end of The Loop
 	?>
 	
+	<div class="pagination">
+		<?php dodo_pagination(); ?>
+	</div>
+
 </main>
 <!-- end #content -->
 

@@ -18,8 +18,25 @@
 			<h2><?php bloginfo( 'description' ) ?></h2>
 			
 			<?php 
-			//TODO: upgrade this to the fancy menu system
-			wp_list_pages(); ?>
+			//display a menu location  (don't forget to register it in functions.php)
+			wp_nav_menu( array(
+				'theme_location' 	=> 'main_menu',
+				'container'			=> 'nav',			 // div, nav, or ''
+				'container_class'	=> 'main-navigation',// nav class="main-navigation"
+				'menu_class'		=> 'menu',			 // ul class="menu"
+				'fallback_cb'		=> false,			 // do nothing if no menu exists
+			) );
+			?>
+
+			<?php 
+			//display the social media menu
+			wp_nav_menu( array(
+				'theme_location' 	=> 'social_icons',
+				'container_class' 	=> 'social-navigation',
+				'link_before' 		=> '<span class="screen-reader-text">',
+				'link_after'		=> '</span>',
+			) );
+			 ?>
 
 			<?php get_search_form(); //default search form OR searchform.php ?>
 		</div>

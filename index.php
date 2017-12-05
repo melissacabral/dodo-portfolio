@@ -39,6 +39,11 @@
 	endif; 
 			//end of The Loop
 	?>
+
+	<div class="pagination">
+		<?php dodo_pagination(); ?>
+	</div>
+
 	
 </main>
 <!-- end #content -->

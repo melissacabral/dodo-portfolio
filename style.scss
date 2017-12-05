@@ -13,6 +13,7 @@ License: GPLv3
 @import 'scss/partials/reset';
 @import 'scss/partials/typography';
 @import 'scss/partials/layout';
+@import 'scss/partials/navigation';
 @import 'scss/partials/wordpress-core';
 
 
@@ -25,6 +26,16 @@ body{
 //current menu page
 .current_page_item > a{
 	background: white;
+}
+
+
+.pagination{
+	@include flexbox;
+	@include justify-content(space-between);
+}
+//pagination
+.pagination a{
+	@include button(hotpink);
 }
 
 
