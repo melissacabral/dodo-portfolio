@@ -100,8 +100,38 @@ function dodo_pagination(){
 	endif;
 }
 
-
-
-
+/**
+ * register all the widget areas (dynamic sidebars)
+ */
+add_action( 'widgets_init', 'dodo_widget_areas' );
+function dodo_widget_areas(){
+	register_sidebar( array(
+		'name' 	=> 'Blog Sidebar',
+		'id' 	=> 'blog_sidebar',
+		'description' => 'Appears alongside the Blog and archive pages',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' 	=> 'Footer Area',
+		'id' 	=> 'footer_area',
+		'description' => 'Appears at the bottom of every screen',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );	
+	register_sidebar( array(
+		'name' 	=> 'Home Area',
+		'id' 	=> 'home_area',
+		'description' => 'Appears only on the front page',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}
 
 //no close php

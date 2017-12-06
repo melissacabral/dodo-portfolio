@@ -1,44 +1,28 @@
 /*
-Theme Name: Dodo Portfolio
+Theme Name: October Morning
 Author: Melissa Cabral
-Description: A theme for learning how to theme
-Version: 0.1
+Description: A bare-bones theme for learning
 License: GPLv3
+Version: 0.1
+
+Other comments can go here, too
 */
-
-@import 'scss/modules/colors';
-@import 'scss/modules/variables';
-@import 'scss/modules/mixins';
-@import 'scss/vendor/flexbox';
-@import 'scss/partials/reset';
-@import 'scss/partials/typography';
-@import 'scss/partials/layout';
-@import 'scss/partials/navigation';
-@import 'scss/partials/wordpress-core';
-
-
-body{
-	background: $background;	
-}
-
-
-
-//current menu page
-.current_page_item > a{
-	background: white;
-}
-
-
-.pagination{
-	@include flexbox;
-	@include justify-content(space-between);
-}
-//pagination
-.pagination a{
-	@include button(hotpink);
-}
-
-
-
+@import 'scss/variables';
+@import 'scss/flexbox';
+@import 'scss/functions';
+@import 'scss/reset';
+@import 'scss/mixins';
+@import 'scss/main-styles';
+@import 'scss/wp-core';
+@import 'scss/typography';
+@import 'scss/post-formats';
+@import 'scss/forms';
+@import 'scss/comments';
+@import 'scss/social_icons';
+@import 'scss/responsive-menu';
+@import 'scss/home-page';
+@import 'scss/portfolio';
+@import 'scss/media-queries';
+@import 'scss/woocommerce';
 
 

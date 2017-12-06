@@ -10,8 +10,11 @@
 <body <?php body_class(); ?>>
 	<header class="header" style="background-image:url(<?php header_image(); ?>)">
 		<div class="header-bar">
+			<?php if(has_custom_logo(  ) && is_front_page()): ?>
+				<div class="logo">
 			<?php the_custom_logo(); ?>
-
+</div>
+<?php endif; ?>
 			<h1 class="site-title"><a href="<?php echo home_url(); ?>">
 				<?php bloginfo('name'); ?>				
 			</a></h1>
