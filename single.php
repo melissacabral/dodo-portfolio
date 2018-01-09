@@ -38,6 +38,7 @@
 					<span class="tags"><?php the_tags(); ?></span>
 				</div>
 				<!-- end .postmeta -->
+				<?php comments_template(); //show comment list and comment form ?>
 			</article>
 			<!-- end .post -->
 

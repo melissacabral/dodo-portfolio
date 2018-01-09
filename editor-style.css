@@ -1,13 +1,13 @@
 /*
 Error: Undefined variable: "$body-font".
-        on line 3 of C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss
-        from line 1 of C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/editor-style.scss
+        on line 4 of C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss
+        from line 1 of C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/editor-style.scss
 
 1: @import 'scss/partials/typography';
 
 Backtrace:
-C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss:3
-C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/editor-style.scss:1
+C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss:4
+C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/editor-style.scss:1
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
@@ -70,4 +70,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$body-font\".\A         on line 3 of C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss\A         from line 1 of C:/xampp/htdocs/melissa-wp-1117/portfolio-website/wp-content/themes/dodo-portfolio/editor-style.scss\A \A 1: @import 'scss/partials/typography';"; }
+  content: "Error: Undefined variable: \"$body-font\".\A         on line 4 of C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/scss/partials/_typography.scss\A         from line 1 of C:/xampp/htdocs/melissa/wp/1117/wp-content/themes/dodo-portfolio/editor-style.scss\A \A 1: @import 'scss/partials/typography';"; }

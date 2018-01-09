@@ -7,22 +7,27 @@ Version: 0.1
 
 Other comments can go here, too
 */
-@import 'scss/variables';
-@import 'scss/flexbox';
-@import 'scss/functions';
-@import 'scss/reset';
-@import 'scss/mixins';
-@import 'scss/main-styles';
-@import 'scss/wp-core';
-@import 'scss/typography';
-@import 'scss/post-formats';
-@import 'scss/forms';
-@import 'scss/comments';
-@import 'scss/social_icons';
-@import 'scss/responsive-menu';
-@import 'scss/home-page';
-@import 'scss/portfolio';
-@import 'scss/media-queries';
-@import 'scss/woocommerce';
+@import 'scss/vendor/flexbox';
+
+@import 'scss/modules/variables';
+@import 'scss/modules/functions';
+@import 'scss/modules/mixins';
+
+@import 'scss/partials/reset';
+@import 'scss/partials/main-styles';
+@import 'scss/partials/layout';
+@import 'scss/partials/wordpress-core';
+@import 'scss/partials/navigation';
+@import 'scss/partials/forms';
+@import 'scss/partials/comments';
+@import 'scss/partials/typography';
+@import 'scss/partials/post-formats';
+
+@import 'scss/partials/social_icons';
+@import 'scss/partials/responsive-menu';
+@import 'scss/partials/home-page';
+@import 'scss/partials/portfolio';
+@import 'scss/partials/media-queries';
+@import 'scss/partials/woocommerce';
 
 
