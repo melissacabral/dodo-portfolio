@@ -201,6 +201,78 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 0  );
 
+/**
+ * Theme Customizer Additions
+ * @link https://codex.wordpress.org/Theme_Customization_API
+ */
+
+add_action( 'customize_register', 'dodo_customize' );
+function dodo_customize( $wp_customize ){
+	//add a new setting for text color
+	$wp_customize->add_setting( 'text_color', array(
+		'default' => '#FF0000',
+	) );
+
+	//add the UI for controlling that setting
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 
+		'dodo_text_color', array(
+				'label' 	=> 'Body Text Color',
+				'section' 	=> 'colors', 
+				'settings'	=> 'text_color',
+	) ) );
+
+	//Dropdown option - color scheme
+	//add a new section
+	$wp_customize->add_section( 'color_scheme', array(
+		'title'	=> 'Color Scheme',
+		'priority' => 20,
+	) );
+	//add a new setting
+	$wp_customize->add_setting( 'current_color_scheme', array(
+		'default' => 'light',
+	) );
+	//add the control UI - dropdown (select)
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 
+		'dodo_color_scheme', array(
+			'type' 		=> 'select', //dropdown
+			'choices' 	=> array(
+								'dark' => 'Dark',
+								'light' => 'Light',
+							),
+			'section' 	=> 'color_scheme',
+			'settings' 	=> 'current_color_scheme',
+			'label' 	=> 'Current Color Scheme',
+		) ) );
+	
+}
+
+//Display the Custom CSS
+add_action( 'wp_head', 'dodo_custom_style' );
+function dodo_custom_style(){
+	?>
+	<style>
+		.content, .sidebar{
+			color: <?php echo get_theme_mod('text_color'); ?>;
+		}
+		
+	</style>
+	<?php 
+	 //logic for color scheme switching
+	 if( get_theme_mod('current_color_scheme') == 'dark' ):
+	 	?>
+	 	<style>
+	 		body{
+	 			background-color:black;
+	 			color:white;
+	 		}
+	 		.header{
+
+	 		}
+	 	</style>
+	 	<?php
+	 endif;
+}
+
 
 
 
